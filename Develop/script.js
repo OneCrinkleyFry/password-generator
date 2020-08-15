@@ -10,9 +10,8 @@ var randomChar = function (charArray) {
 }
 
 var createPassword1 = function(criteria1, length) {
-  var password ="";
+  var password = "";
   for (var i = 0; i < length; i++) {
-    debugger;
     password = password + randomChar(criteria1);
     console.log(password);
   }
@@ -21,14 +20,32 @@ var createPassword1 = function(criteria1, length) {
 
 var createPassword2 = function(criteria1, criteria2, length) {
   var criteriaList = [criteria1, criteria2];
+  var password = "";
+  for (var i = 0; i < length; i++) {
+    password = password + randomChar(criteriaList[Math.floor(Math.random() * criteriaList.length)]);
+    console.log(password);
+  }
+  return password;
 }
 
 var createPassword3 = function(criteria1, criteria2, criteria3, length) {
-  
+  var criteriaList = [criteria1, criteria2, criteria3];
+  var password = "";
+  for (var i = 0; i < length; i++) {
+    password = password + randomChar(criteriaList[Math.floor(Math.random() * criteriaList.length)]);
+    console.log(password);
+  }
+  return password;
 }
 
 var createPassword4 = function(criteria1, criteria2, criteria3, criteria4, length) {
-  
+  var criteriaList = [criteria1, criteria2, criteria3, criteria4];
+  var password = "";
+  for (var i = 0; i < length; i++) {
+    password = password + randomChar(criteriaList[Math.floor(Math.random() * criteriaList.length)]);
+    console.log(password);
+  }
+  return password;
 }
 
 var generatePassword = function() {
